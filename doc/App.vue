@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" v-if="initialized">
     <div class="sp-left-side">
       <div class="sp-logo"></div>
       <el-menu
@@ -175,15 +175,11 @@
 const theme = location.search.substr(1)
 // TODO: more color palette
 const themes = ['shopee', 'element', 'flat-ui'/*, 'material', 'metro', 'fluent'*/]
-if (!theme) {
-  location.href = `?${themes[0]}`;
-} else {
-  require(`../dist/${theme}/index.css`)
-}
 
 export default {
   data() {
     return {
+      initialized: false,
       theme,
       themes,
       tableData: [
@@ -259,6 +255,22 @@ export default {
       }).catch(() => {})
     },
     nullFunc() {}
+  },
+  created() {
+    if (!theme) {
+      location.href = `?${themes[0]}`
+      return
+    }
+    if (process.env.NODE_ENV === 'production') {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = `dist/${theme}/index.css`
+      document.head.appendChild(link)
+      link.onload = () => this.initialized = true
+    } else {
+      require(`../dist/${theme}/index.css`)
+      this.initialized = true
+    }
   },
   mounted() {
     this.openNotify()
