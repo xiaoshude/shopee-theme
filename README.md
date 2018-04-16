@@ -1,16 +1,15 @@
-# theme
+# Shopee themes
 
 ## Develop
-custom element theme in theme/element-variables.scss
-custom css in dist/
+Custom theme in `src/[theme-name]/` directory
+Use `yarn run compile` to compile all themes
 
+## Write docs
+Docs are placed in `/doc`
+Use `yarn run docs` to preview
 
-## write expamle
-place in /doc
-`npm run dev` to preview
+## Publish
+Use `yarn run publish` to publish theme to npm
 
-## publish
-`npm run publish` to publish theme to npm
-
-## use
-`import 'shopee-theme/dist/index.css'`
+## Use in another project
+`import 'shopee-theme/dist/[theme-name]/index.css'`

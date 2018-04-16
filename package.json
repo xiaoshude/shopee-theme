@@ -4,9 +4,9 @@
   "author": "yi.shyang@ele.me",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot --env.dev",
+    "docs": "webpack-dev-server --inline --hot --env.dev",
     "build": "rimraf dist && webpack -p --progress --hide-modules",
-    "compile": "node_modules/.bin/et -c theme/element-variables.scss -o element-theme",
+    "compile": "./compile.sh",
     "prepublish": "npm run compile"
   },
   "dependencies": {

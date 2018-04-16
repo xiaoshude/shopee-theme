@@ -1,0 +1,242 @@
+/* hack for element-ui */
+
+.el-aside {
+  height: 100%;
+}
+.el-main {
+  background: #f0f2f5;
+}
+.cell button {
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+.clearfix {
+  display: inline-block;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+svg,
+svg + * {
+  vertical-align: middle;
+}
+.fa-icon {
+  width: auto;
+  height: 1em;
+  max-width: 100%;
+  max-height: 100%;
+}
+.el-table th .cell {
+  word-break: break-word;
+}
+.single-display-page {
+  text-align: center;
+}
+.single-display-page table {
+  border-collapse: collapse;
+  text-align: left;
+}
+.single-display-page .key-value tr td:nth-child(odd) {
+  text-align: right;
+  font-weight: bold;
+  width: 200px;
+  padding-right: 20px;
+}
+.single-display-page .key-value tr td:nth-child(even) {
+  text-align: left;
+}
+.status-tag {
+  border-radius: 4px;
+  font-size: 12px;
+  color: #fff;
+  display: inline-block;
+  padding: 0 5px;
+  white-space: nowrap;
+}
+
+/* menu */
+.el-menu {
+  border-right: none;
+}
+.el-submenu.is-opened > .el-submenu__title {
+  background-color: var(--bg-color-dark) !important;
+}
+.el-menu-item {
+  background-color: var(--bg-color-dark) !important;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+}
+.el-menu-item.is-active {
+  border-left-color: var(--color-primary);
+}
+.el-submenu__title:hover {
+  background-color: var(--bg-color-dark) !important;
+}
+.el-submenu__title > i {
+  color: #ddd;
+  width: 14px !important;
+  height: 14px;
+  font-size: 14px !important;
+}
+
+/* table */
+.el-table .cell .el-button {
+  margin-bottom: 0;
+}
+
+/* form */
+.el-form {
+  margin-bottom: -22px;
+}
+.el-input-group {
+  vertical-align: middle;
+}
+.el-menu-item a {
+  display: block;
+}
+.el-input input[type=number]::-webkit-inner-spin-button {
+  display: none;
+}
+
+/* notifications */
+.el-notification__content {
+  text-align: left;
+}
+
+/* uploader */
+.el-upload {
+  border: 1px dashed var(--bg-color);
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.el-upload:hover {
+  border-color: var(--color-primary);
+}
+.el-upload i {
+  font-size: 28px;
+  color: var(--text-color);
+  width: 178px;
+  height: 178px;
+  line-height: 178px;
+  text-align: center;
+}
+
+/* shopee own theme */
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+html, body, #app, .el-container {
+  height: 100%;
+}
+#app {
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: var(--text-color-dark);
+  overflow: hidden;
+}
+.sp-breadcrumb-container {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+.sp-breadcrumb-container > * {
+  display: inline-block;
+  margin-right: 5px;
+  height: 20px;
+  line-height: 20px;
+  vertical-align: middle;
+}
+.sp-card {
+  background: var(--bg-card);
+  border-radius: 0.4rem;
+  overflow: hidden;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.sp-left-side,
+.sp-right-side {
+  background: var(--bg-color);
+  color: var(--text-color-light);
+  height: 100%;
+}
+.sp-left-side {
+  float: left;
+  width: var(--left-side-width);
+}
+.sp-left-side .sp-logo {
+  background-color: var(--bg-color-darker);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto calc(var(--header-height) / 2);
+  width: 100%;
+  height: var(--header-height);
+}
+.sp-right-side {
+  width: calc(100% - var(--left-side-width));
+  float: left;
+  overflow: auto;
+}
+.sp-right-side header {
+  height: var(--header-height);
+  line-height: var(--header-height);
+  padding: 0 2rem;
+}
+.sp-right-side article {
+  background: var(--bg-color-light);
+  color: var(--text-color-dark);
+  padding: 1.5rem;
+  overflow: auto;
+  height: calc(100% - var(--header-height));
+}
+.sp-tab {
+  display: inline-block;
+  padding: 0 0.5rem;
+  border-radius: 5px;
+  font-size: 12px;
+  color: var(--text-color-light);
+}
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-success {
+  background-color: var(--color-success);
+}
+.bg-warning {
+  background-color: var(--color-warning);
+}
+.bg-danger {
+  background-color: var(--color-danger);
+}
+.bg-info {
+  background-color: var(--color-info);
+}
+.color-primary {
+  color: var(--color-primary);
+}
+.color-success {
+  color: var(--color-success);
+}
+.color-warning {
+  color: var(--color-warning);
+}
+.color-danger {
+  color: var(--color-danger);
+}
+.color-info {
+  color: var(--color-info);
+}
