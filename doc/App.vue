@@ -115,7 +115,7 @@
             </el-table-column>
             <el-table-column prop="status" label="Status">
               <template slot-scope="scope">
-                <span class="sp-tab" :class="`bg-${statusColor[scope.row.status]}`">{{ statusText[scope.row.status] }}</span>
+                <span class="sp-tag" :class="`sp-bg-${statusColor[scope.row.status]}`">{{ statusText[scope.row.status] }}</span>
               </template>
             </el-table-column>
             <el-table-column label="Action" width="220">
@@ -139,6 +139,12 @@
               :total="233">
             </el-pagination>
           </p>
+        </div>
+        <div class="sp-card variables">
+          <h1>Variables</h1>
+          <p>Shopee theme uses <var>CSS Variables</var>, it's easy to change some styles by simply adding some lines to your css codes (all available variables are listed below):</p>
+          <pre>{{ codes.changeStyles }}</pre>
+          <p>Other variables by the way, are not meant to be modified.</p>
         </div>
       </article>
     </div>
@@ -201,6 +207,20 @@ export default {
           message: 'Should more than 10 characters!',
           trigger: 'change'
         }]
+      },
+      codes: {
+        changeStyles: `#app {
+  --font-size: 14px;
+  --header-height: 60px;
+  --left-side-width: 250px;
+  --breadcrumb-height: 20px;
+  --card-border-radius: 5px;
+  --card-spacing: 16px;
+  --tag-border-radius: 5px;
+  --tag-font-size: 12px;
+  --uploader-size: 178px;
+  --uploader-border-radius: 5px;
+}`
       }
     }
   },
