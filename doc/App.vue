@@ -266,14 +266,17 @@ export default {
       link.rel = 'stylesheet'
       link.href = `dist/${theme}/index.css`
       document.head.appendChild(link)
-      link.onload = () => this.initialized = true
+      link.onload = () => {
+        this.initialized = true
+        this.openNotify()
+      }
     } else {
       require(`../dist/${theme}/index.css`)
       this.initialized = true
+      this.openNotify()
     }
   },
   mounted() {
-    this.openNotify()
     this.setLoading(false)
   }
 }
