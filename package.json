@@ -1,7 +1,12 @@
 {
-  "name": "element-starter",
-  "description": "A Vue.js project",
-  "author": "yi.shyang@ele.me",
+  "name": "shopee-theme",
+  "version": "0.1.0",
+  "description": "Common theme for shopee sls team.",
+  "author": "zhiyuan.fu@shopee.com",
+  "contributors": [
+    "zhiyuan.fu@shopee.com",
+    "xianwen.zeng@shopee.com"
+  ],
   "private": true,
   "scripts": {
     "docs": "webpack-dev-server --inline --hot --env.dev",
